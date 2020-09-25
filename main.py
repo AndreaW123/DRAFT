@@ -1,28 +1,24 @@
 '''
-X = "done"
 
+Name: Andrea Napoli-Wilson
+Class: CIS 250
+Date: 9/25/2020
+Project name: Task 2--Draft Program in a .py File
+
+INSTRUCTIONS:
+X = "done"
 X Create a Python Application which asks the user for their zip code or city.
 X Use the zip code or city name in order to obtain weather forecast data from: http://openweathermap.org/
 X Display the weather forecast in a readable format to the user.
 X Use comments within the application where appropriate in order to document what the program is doing.
 X Use functions including a main function.
 X Allow the user to run the program multiple times.
-
-
-*** Validate whether the user entered valid data. If valid data isn’t presented notify the user.
+X Validate whether the user entered valid data. If valid data isn’t presented notify the user.
 X Use the Requests library in order to request data from the webservice.
 X Use Python 3.
-**** Use try blocks when establishing connections to the webservice. You must print a message to the user indicating whether or not the connection was successful.
+X Use try blocks when establishing connections to the webservice. You must print a message to the user indicating whether or not the connection was successful.
 Deliverables (More detail on these deliverables is provided in the the weeks they are due):
-
-Flowchart (Due week 3)
-Draft Program in a .py file (Due week 7)
-Final Program in a .py file (Due week 9)
-Project Notes:
-
-Sign up for API Key http://openweathermap.org/appid
-The API key will look something similar to this: d5751b1a9e2e4b2b8c7983646072da8b
-Make a connection to the API using the Requests library. '''
+'''
 
 # Python program to find current
 # weather details of any city
@@ -120,37 +116,3 @@ def main():
 
 if __name__ =="__main__":
     main()
-'''
-            # Give city name
-    city_name = input("\nPlease enter the city name (q to quit): ")
-
-    if city_name.lower() == "q":
-        break
-
-    # complete url address
-    open_weather_site = open_weather + "appid=" + api_key + "&q=" + city_name
-
-    # request Open weather site
-    # return response
-    response = requests.get(open_weather_site)
-    #print(response.text)
-
-    # json method of response object
-    # convert json format data into
-    # python format data
-    weather = json.loads(response.text)
-
-    # Get current temperature
-    k = weather['main']['temp']
-    # convert to F
-    temp_f = fer(k)
-    print(f"Current Temperature: {temp_f:.2f} F")
-
-    # Get humidity
-    humidity = weather['main']['humidity']
-    print(f"The current Humidity: {humidity}")
-
-    # Get pressure
-    pressure = weather['main']['pressure']
-    print(f"The current pressure: {pressure}")
-'''
